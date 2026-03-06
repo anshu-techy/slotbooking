@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Slot - Slot Booking</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">SlotBook</a>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="my-bookings.html">My Bookings</a>
+      <a href="#" id="logout-btn">Logout</a>
+    </div>
+  </nav>
+
+  <main class="book-slot-page">
+    <div class="form-card">
+      <h1>Book a Slot</h1>
+      <form id="book-slot-form">
+        <label>Date</label>
+        <input type="date" id="slot-date" required />
+        <label>Time Slot</label>
+        <select id="slot-time" required>
+          <option value="">Select time</option>
+          <option value="09:00 - 10:00">09:00 - 10:00</option>
+          <option value="10:00 - 11:00">10:00 - 11:00</option>
+          <option value="11:00 - 12:00">11:00 - 12:00</option>
+          <option value="14:00 - 15:00">14:00 - 15:00</option>
+          <option value="15:00 - 16:00">15:00 - 16:00</option>
+        </select>
+        <label>Requirement</label>
+        <select id="slot-requirement" required>
+          <option value="">Select type</option>
+          <option value="Meeting Room">Meeting Room</option>
+          <option value="Lab Access">Lab Access</option>
+          <option value="Consultation">Consultation</option>
+          <option value="Equipment booking">Equipment booking</option>
+        </select>
+        <button type="submit" class="btn btn-primary btn-block">Book Slot</button>
+      </form>
+      <div id="book-message" class="message"></div>
+    </div>
+  </main>
+  <script src="js/app.js"></script>
+  <script src="js/book-slot.js"></script>
+</body>
+</html>

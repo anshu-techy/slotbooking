@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - Slot Booking</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">SlotBook Admin</a>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="#" id="logout-btn">Logout</a>
+    </div>
+  </nav>
+
+  <main class="admin-page">
+    <h1>Admin Panel</h1>
+
+    <div class="admin-section">
+      <h2>Search Users</h2>
+      <input type="text" id="search-users" placeholder="Search by name, email or phone" class="search-input" />
+      <div id="users-list" class="users-list"></div>
+    </div>
+
+    <div class="admin-section">
+      <h2>All Bookings</h2>
+      <button type="button" id="export-excel-btn" class="btn btn-primary">Export to Excel</button>
+      <div id="admin-bookings-list" class="bookings-list"></div>
+      <div id="admin-bookings-empty" class="empty-state hidden">No bookings.</div>
+    </div>
+
+    <div id="admin-message" class="message"></div>
+  </main>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
